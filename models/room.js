@@ -2,15 +2,16 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const roomSchema = new Schema({
-  people: { type: String, required: true },
-  choices: { type: String, required: true },
+  room: String,
+  people: String,
+  choices: { type: Array, required: true },
   event: String,
-  deploy: { type: deploy, default: deploy.now }
+  deploy: Boolean
 });
 
-const room = mongoose.model("room", roomSchema);
+const Room = mongoose.model("Room", roomSchema);
 
-module.exports = room;
+module.exports = Room;
 
 // books = rooms
 // title = people 

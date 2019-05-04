@@ -15,7 +15,7 @@ const roomSeed = [
   {
     room: "150",
     people: "Sarah",
-    choices:[ "option1", "option2", "option3"],
+    choices:[ "Talk To Sarah", "Log Into Bootcamp Spot", "Engage in Class Activity", "Attempt to Deploy to Heroku", "Walk Back Into Hallway"],
     event: "activity",
     deploy: false
   },

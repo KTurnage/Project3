@@ -1,0 +1,12 @@
+{
+    "room120": {
+        "image": "https://cdn.macrumors.com/images-new/logo_blue.png",
+        "instructions": "In the first part of this series, you have learned about some important topics that will enable you to create the complete game. You have also used create-react-app to bootstrap your project and you have created some game elements like the cannon, the sky, and the ground. In the end, you have add",
+        "options": ["option1", "option2", "option3", "option4", "option5"]
+    },
+
+    "frontDoor": {
+        "image": ,
+        ""
+    }
+}

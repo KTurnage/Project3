@@ -1,11 +1,19 @@
-import React from 'react';
-import Game from './components/Game';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Startpage from "./components/pages/Startpage";
+import Hallway from './components/Hallway'
 
 function App() {
   return (
-    <div className="App">
-      <Game></Game>
-    </div>
+    <Router>
+      <div>
+        
+          <Route exact path="/" component={Startpage} />
+          <Route exact path="/Hallway" component={Hallway} />
+
+        
+      </div>
+    </Router>
   );
 }
 

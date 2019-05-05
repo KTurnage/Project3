@@ -30,9 +30,9 @@ class Game extends Component {
 
     render() {
         return (
+            
+            
             <div>
-         
-
                 <Card className="text-center">
                     <Card.Header>{this.title}Test</Card.Header>
                     <Card.Body>

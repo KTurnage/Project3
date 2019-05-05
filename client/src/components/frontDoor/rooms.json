@@ -1,10 +1,113 @@
-
-
 {
-    "room120": {
-        "photo": "whatever.png",
-        "instructions": "You walk into room 120...",
-        "options": ["option1", "option2", "option3", "option4", "option5"]
-        
-    }
+    "rooms": [
+        {
+            "room": "room120",
+            "photo": "whatever.png",
+            "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
+            "optionsResults": [
+                {
+                    "option": "Brayden walks by offers a tutoring session",
+                    "result": "Fizz Buzz Algorythm",
+                    "answers": ["A", "B", "C"]
+                },
+                {
+                    "option": "Work solo on your project",
+                    "result": ["Congratulations, you learned stuffs. You earned 10 smarts", "You went down a rabbit hole, and learned nothing. You lost an additional 5% battery."]
+                },
+                {
+                    "option": "Attempt to push to github. You have added and commited your changes. What's next?",
+                    "result": ["git push origin master", "git pull origin master", "merge branches"]
+                },
+                {
+                    "option": "Attmpt to deploy to Heroku",
+                    "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
+                },
+                {
+                    "option": "Go back to hallway",
+                    "result": ""
+                }
+                    
+                
+            ]
+        },
+        {
+            "room": "room150",
+            "photo": "whatever.png",
+            "instructions": "You walk into room 150...you hear 'hello folks'",
+            "optionsResults": [
+                {
+                    "option": "Get help from Sarah. *show class activity*",
+                    "result": ["Bucket", "Kittens", "var"]
+                },
+                {
+                    "option": "Log into BootCamp Spot",
+                    "result": ["Boot Camp Spot is working today! You earned 5 smarts.", "BCS is down again. You lost an additional 5% of battery"]
+                },
+                {
+                    "option": "Follow along in class activity *show class activity*",
+                    "result": ["A", "B", "C"]
+                },
+                {
+                    "option": "Attmpt to deploy to Heroku",
+                    "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
+                },
+                {
+                    "option": "Go back to hallway",
+                    "result": ""
+                }
+                    
+                
+            ]
+        },
+        {
+            "room": "gardenRoom",
+            "photo": "whatever.png",
+            "instructions": "You walk into the garden room. Your team is there.",
+            "optionsResults": [
+                {
+                    "option": "Read Heroku deployment guide",
+                    "result": ["A", "B", "C"]
+                },
+                {
+                    "option": "Plug into a questionable outlet",
+                    "result": ["You plugged into the outlet and earned 10% battery.", "Youre lucky this outlet didn't fry your computer, however, you did not get any battery life."]
+                },
+                {
+                    "option": "Collaborate with your team",
+                    "result": ["You successfully collaborated with your team. You earned 10 smarts.", "You all went down a BAD path, and learned nothing. You lose an additional 5% battery."]
+                },
+                {
+                    "option": "Attmpt to deploy to Heroku",
+                    "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
+                },
+                {
+                    "option": "Go back to hallway",
+                    "result": ""
+                }
+                    
+                
+            ]
+        },{
+            "room": "hallway",
+            "photo": "whatever.png",
+            "instructions": "You walk into room 120...",
+            "optionsResults": [
+                {
+                    "option": "Go into Room 120",
+                    "result": ""
+                },
+                {
+                    "option": "Go into Room 150",
+                    "result": ""
+                },
+                {
+                    "option": "Go into the Garden Room",
+                    "result": ""
+                }
+                    
+                
+            ]
+        }
+    ]
 }
+

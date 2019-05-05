@@ -1,11 +1,11 @@
 import React from 'react';
-import FrontDoor from './components/frontDoor';
+import Game from './components/Game';
 
 function App() {
   
   return (
-    <div>
-      <FrontDoor />
+    <div className="App">
+      <Game></Game>
     </div>
   );
 }

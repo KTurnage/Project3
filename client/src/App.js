@@ -4,6 +4,7 @@ import Startpage from "./components/pages/Startpage";
 import Hallway from './components/Hallway'
 
 function App() {
+  
   return (
     <Router>
       <div>

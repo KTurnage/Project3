@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container";
 import Row from "../Row";
 import Col from "../Col";
-import Buttons from '../../components/Buttons'
+import Buttons from '../Buttons'
 
 function Hallway() {
   return (

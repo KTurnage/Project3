@@ -7,7 +7,7 @@ import Buttons from '../../components/Buttons'
 function Room120() {
   return (
     <div>
-      
+
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
@@ -29,13 +29,13 @@ function Room120() {
               mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
               tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
             </p>
-            
+
           </Col>
         </Row>
         <Row>
-        <Col size="md-12">
-    <Buttons></Buttons>        
-        </Col>
+          <Col size="md-12">
+            <Buttons></Buttons>
+          </Col>
         </Row>
       </Container>
     </div>

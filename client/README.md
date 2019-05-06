@@ -1,3 +1,88 @@
+# Boot Camp Adventures
+
+An interactive game with a hat tip to old school text based games. Each event has the potential to gain smarts or to lose battery life. The goal is to collect enough smarts to successfully deploy to Heroku before your battery runs out.<br>
+
+Players start the game with 0 smarts, and 100% battery. Each educational event will drain 10% battery life. A successful completing of educational event will result in acquiring 10 smarts. Failure to correctly complete an educational event will reslt in an additional 5% battery loss. Each room has an event that will have a random result. Success will result in gaining smarts, failure will result in losing an additional 5% battery.<br>
+
+There is an opportunity to gain some battery life back...but it's risky.
+
+## Getting Started
+
+Link to the repository<br>
+Link to Heroku deployemnt
+
+### Prerequisites
+
+React<br>
+React-dom<br>
+Express<br>
+Node<br>
+MongoDB<br>
+
+
+### Installing
+
+Run npm i to install all required packages
+
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Matthew Sturdy** - *Collaborator* - https://github.com/sturdy75
+* **Brian Ford** - *Collaborator* - https://github.com/bf2344
+* **Todd Tate** - *Collaborator* - https://github.com/ToddTateDev
+* **Krista Turnage** - *Collaborator* - https://github.com/KTurnage
+
+
+## License
+
+This project is licensed under The Bad News Bears
+
+## Acknowledgments
+
+* Hat tip to Sarah Cullen for all her geniusness.
+* Inspiration from Coding Boot Camp from Trillogy at DU.
+
+
+====================================================================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

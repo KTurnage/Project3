@@ -19,7 +19,7 @@ function Room150() {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
           
-            
+            </p>
           </Col>
         </Row>
         <Row>

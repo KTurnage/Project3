@@ -15,8 +15,9 @@
                     "result": ["Congratulations, you learned stuffs. You earned 10 smarts", "You went down a rabbit hole, and learned nothing. You lost an additional 5% battery."]
                 },
                 {
-                    "option": "Attempt to push to github. You have added and commited your changes. What's next?",
-                    "result": ["git push origin master", "git pull origin master", "merge branches"]
+                    "option": "Attempt to push to github. You have added and commited your changes.",
+                    "result": "What's next?",
+                    "answers": ["git push origin master", "git pull origin master", "merge branches"]
                 },
                 {
                     "option": "Attmpt to deploy to Heroku",
@@ -37,7 +38,8 @@
             "optionsResults": [
                 {
                     "option": "Get help from Sarah. *show class activity*",
-                    "result": ["Bucket", "Kittens", "var"]
+                    "result": "",
+                    "answers": ["Bucket", "Kittens", "var"]
                 },
                 {
                     "option": "Log into BootCamp Spot",
@@ -45,7 +47,8 @@
                 },
                 {
                     "option": "Follow along in class activity *show class activity*",
-                    "result": ["A", "B", "C"]
+                    "result": "",
+                    "answers": ["A", "B", "C"]
                 },
                 {
                     "option": "Attmpt to deploy to Heroku",
@@ -66,11 +69,12 @@
             "optionsResults": [
                 {
                     "option": "Read Heroku deployment guide",
-                    "result": ["A", "B", "C"]
+                    "result": "",
+                    "answers": ["A", "B", "C"]
                 },
                 {
                     "option": "Plug into a questionable outlet",
-                    "result": ["You plugged into the outlet and earned 10% battery.", "Youre lucky this outlet didn't fry your computer, however, you did not get any battery life."]
+                    "result": ["You plugged into the outlet and earned 10% battery.", "You're lucky this outlet didn't fry your computer, however, you did not get any battery life."]
                 },
                 {
                     "option": "Collaborate with your team",

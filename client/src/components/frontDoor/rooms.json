@@ -2,24 +2,15 @@
     "rooms": [
        {
             "room": "room120",
-<<<<<<< HEAD
-            "photo": "room120.png",
-            "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
-            "optionsResults": [
-                {
-                    "option": "Brayden walks by offers a tutoring session. Fill in the missing code.",
-                    "result": "FizzBuzz Photo",
-                    "answers": ["A) arr[i + 1]", "B) fizzBuzz[i] ", "C) arr[i]"]
-=======
             "photo": "./images/testphoto.jpg",
             "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
             "optionsResults": [
                 {
                     "option": "Brayden walks by offers a tutoring session",
                     "result": "Fizz Buzz Algorithm",
-                    "answers": ["A", "B", "C"]
->>>>>>> e4b7daf51020ceba74717e17ab1df6d04799eb82
+                    "answers": ["A) arr[i + 1]", "B) fizzBuzz[i] ", "C) arr[i]"]
                 },
+                
                 {
                     "option": "Work solo on your project",
                     "result": ["Congratulations, you learned stuffs. You earned 10 smarts", "You went down a rabbit hole, and learned nothing. You lost an additional 5% battery."]

@@ -1,13 +1,13 @@
 {
     "rooms": [
-        {
+       {
             "room": "room120",
-            "photo": "whatever.png",
+            "photo": "./images/testphoto.jpg",
             "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
             "optionsResults": [
                 {
                     "option": "Brayden walks by offers a tutoring session",
-                    "result": "Fizz Buzz Algorythm",
+                    "result": "Fizz Buzz Algorithm",
                     "answers": ["A", "B", "C"]
                 },
                 {

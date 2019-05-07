@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Startpage from "./components/pages/Startpage";
 import Hallway from './components/Hallway'
-import Room120 from './components/room120'
-import Room150 from './components/room150'
+import Room120 from './components/pages/room120'
+import Room150 from './components/pages/room150'
 import BatteryLife from './components/bars/batteryLife'
 import Smarts from './components/bars/smarts'
 

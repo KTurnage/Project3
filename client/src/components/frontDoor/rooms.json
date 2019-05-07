@@ -2,13 +2,13 @@
     "rooms": [
         {
             "room": "room120",
-            "photo": "whatever.png",
+            "photo": "room120.png",
             "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
             "optionsResults": [
                 {
-                    "option": "Brayden walks by offers a tutoring session",
-                    "result": "Fizz Buzz Algorythm",
-                    "answers": ["A", "B", "C"]
+                    "option": "Brayden walks by offers a tutoring session. Fill in the missing code.",
+                    "result": "FizzBuzz Photo",
+                    "answers": ["A) arr[i + 1]", "B) fizzBuzz[i] ", "C) arr[i]"]
                 },
                 {
                     "option": "Work solo on your project",
@@ -33,8 +33,8 @@
         },
         {
             "room": "room150",
-            "photo": "whatever.png",
-            "instructions": "You walk into room 150...you hear 'hello folks'",
+            "photo": "room150.png",
+            "instructions": "You walk into room 150...you hear 'hello folks!' You know Sarah is here to save the day. You have several options in this room to gain some smarts. What would you like to do?",
             "optionsResults": [
                 {
                     "option": "Get help from Sarah. *show class activity*",

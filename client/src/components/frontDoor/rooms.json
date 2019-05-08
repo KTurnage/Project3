@@ -16,17 +16,18 @@
                     "result": ["Congratulations, you learned stuffs. You earned 10 smarts", "You went down a rabbit hole, and learned nothing. You lost an additional 5% battery."]
                 },
                 {
-                    "option": "Attempt to push to github. You have added and commited your changes.",
+                    "option": "Attempt to push to github. You have added and committed your changes.",
                     "result": "What's next?",
                     "answers": ["git push origin master", "git pull origin master", "merge branches"]
                 },
                 {
-                    "option": "Attmpt to deploy to Heroku",
+                    "option": "Attempt to deploy to Heroku",
                     "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": ""
+                    "result": "",
+                    "gotoRoom": "hallway"
                 }
                     
                 
@@ -52,13 +53,13 @@
                     "answers": ["A", "B", "C"]
                 },
                 {
-                    "option": "Attmpt to deploy to Heroku",
+                    "option": "Attempt to deploy to Heroku",
                     "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
                 },
                 {
                     "option": "Go back to hallway",
                     "result": "",
-                    "returnToHallway": true
+                    "gotoRoom": "hallway"
                 }
                     
                 
@@ -83,12 +84,13 @@
                     "result": ["You successfully collaborated with your team. You earned 10 smarts.", "You all went down a BAD path, and learned nothing. You lose an additional 5% battery."]
                 },
                 {
-                    "option": "Attmpt to deploy to Heroku",
+                    "option": "Attempt to deploy to Heroku",
                     "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": ""
+                    "result": "",
+                    "gotoRoom": "hallway"
                 }
                     
                 
@@ -96,7 +98,7 @@
         },{
             "room": "hallway",
             "photo": "whatever.png",
-            "instructions": "You walk into room 120...",
+            "instructions": "You walk into the hallway...",
             "optionsResults": [
                 {
                     "option": "Go into Room 120",

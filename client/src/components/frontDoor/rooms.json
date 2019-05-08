@@ -8,8 +8,9 @@
                 {
                     "option": "Brayden walks by offers a tutoring session",
                     "result": "Fizz Buzz Algorithm",
-                    "answers": ["A", "B", "C"]
+                    "answers": ["A) arr[i + 1]", "B) fizzBuzz[i] ", "C) arr[i]"]
                 },
+                
                 {
                     "option": "Work solo on your project",
                     "result": ["Congratulations, you learned stuffs. You earned 10 smarts", "You went down a rabbit hole, and learned nothing. You lost an additional 5% battery."]

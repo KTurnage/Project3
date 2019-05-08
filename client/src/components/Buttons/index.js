@@ -1,19 +1,43 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import rooms from '../frontDoor/rooms.json';
+  
 
+class Buttons extends React.Component {
 
+componentDidMount() {
+  console.log(rooms.rooms[1].optionsResults[0]);
+}
 
-function Buttons (){
+// createButtons() {
+  
+//   console.log(options);
+  
+//   // for (var i = 0; i < options.length; i++) {
+//   //   return (
+//   //     <Button>{options[i].option}</Button>
+//   //   )
+//   // }
+// }
+
+render (){
   return (
 <div className="d-flex flex-column">
+
   <ButtonGroup size="lg">
-    <Button>Room 120</Button>
+    {rooms.rooms[this.props.index].optionsResults.map(option => (
+    <Button>{option.option}</Button>
+    )) }
+    {/* <Button></Button>
     <Button>Room 150</Button>
-    <Button>Garden Room</Button>
+    <Button>Garden Room</Button> */}
+    {/* {this.createButtons()} */}
   </ButtonGroup>
 
 </div>
   )}
+
+}
 
 export default Buttons;

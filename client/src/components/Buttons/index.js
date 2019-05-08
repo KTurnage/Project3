@@ -11,14 +11,21 @@ class Buttons extends React.Component {
   }
 
   handleClick = (option) => () => {
-    if (this.props.index === 3) { //if we're in the hallway
-      console.log('option', option)
+    if (option.gotoRoom) {
       this.props.handleRoomChange(option.gotoRoom)
     } else {
-      this.props.handleTextChange('description', option.result)
+      // first check if we clicked a pass/fail random check
+      let pickedOption
+      if (option.result && option.result.constructor === Array) {
+        const number = Math.floor(Math.random() * option.result.length)
+        pickedOption = option.result[number]
+        this.props.handleAnswer(number === 0)
+      }
+
+      //we'll also always change the text and answers, if they exist
+      this.props.handleTextChange('description', pickedOption || option.result)
       this.props.handleTextChange('answers', option.answers)
     }
-
   }
 // createButtons() {
   
@@ -32,11 +39,12 @@ class Buttons extends React.Component {
 // }
 
 render () {
+  const currentRoom = rooms.rooms.filter(room => room.room === this.props.room)
   return (
 <div className="d-flex flex-column">
 
   <ButtonGroup size="lg">
-    {rooms.rooms[this.props.index].optionsResults.map(option => (
+    {currentRoom[0].optionsResults.map(option => (
     <Button onClick={this.handleClick(option)}>{option.option}</Button>
     )) }
     {/* <Button></Button>

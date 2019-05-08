@@ -1,0 +1,221 @@
+diff --git a/client/src/App.js b/client/src/App.js
+index 62bc712..7ef050e 100644
+--- a/client/src/App.js
++++ b/client/src/App.js
+@@ -21,9 +21,6 @@ class App extends React.Component {
+ 
+ 
+   handleAnswer(answer) {
+-    console.log(answer)
+-
+-    //TODO: this works but we also need to handle random answer logic
+     answer === true
+       ? this.setState({ smarts: 5 + this.state.smarts, batteryLife: this.state.batteryLife - 10})
+       : this.setState({ batteryLife: this.state.batteryLife - 15 })
+@@ -38,17 +35,12 @@ class App extends React.Component {
+         <Smarts smarts = {this.state.smarts}/>
+ 
+           <div>
+-
+-            { this.state.batteryLife <= 0 } <Route component={LosePage} />
+-
+             <Route exact path="/" component={Startpage} />
+             <Route
+               exact
+               path="/Hallway"
+               render={(props) => <Hallway handleAnswer={this.handleAnswer} {...props} />}
+             />
+-            <Route exact path="/Room120" component={Room120} />
+-            <Route exact path="/Room150" component={Room150} />
+ 
+ 
+           </div>
+diff --git a/client/src/components/Buttons/index.js b/client/src/components/Buttons/index.js
+index eac3dc9..a57b722 100644
+--- a/client/src/components/Buttons/index.js
++++ b/client/src/components/Buttons/index.js
+@@ -11,14 +11,21 @@ class Buttons extends React.Component {
+   }
+ 
+   handleClick = (option) => () => {
+-    if (this.props.index === 3) { //if we're in the hallway
+-      console.log('option', option)
++    if (option.gotoRoom) {
+       this.props.handleRoomChange(option.gotoRoom)
+     } else {
+-      this.props.handleTextChange('description', option.result)
++      // first check if we clicked a pass/fail random check
++      let pickedOption
++      if (option.result && option.result.constructor === Array) {
++        const number = Math.floor(Math.random() * option.result.length)
++        pickedOption = option.result[number]
++        this.props.handleAnswer(number === 0)
++      }
++
++      //we'll also always change the text and answers, if they exist
++      this.props.handleTextChange('description', pickedOption || option.result)
+       this.props.handleTextChange('answers', option.answers)
+     }
+-
+   }
+ // createButtons() {
+   
+@@ -32,11 +39,12 @@ class Buttons extends React.Component {
+ // }
+ 
+ render () {
++  const currentRoom = rooms.rooms.filter(room => room.room === this.props.room)
+   return (
+ <div className="d-flex flex-column">
+ 
+   <ButtonGroup size="lg">
+-    {rooms.rooms[this.props.index].optionsResults.map(option => (
++    {currentRoom[0].optionsResults.map(option => (
+     <Button onClick={this.handleClick(option)}>{option.option}</Button>
+     )) }
+     {/* <Button></Button>
+diff --git a/client/src/components/Hallway/index.js b/client/src/components/Hallway/index.js
+index 46378ef..d1c7104 100644
+--- a/client/src/components/Hallway/index.js
++++ b/client/src/components/Hallway/index.js
+@@ -17,59 +17,36 @@ class Hallway extends React.Component {
+ 
+     this.state = {
+       textComplete: true,
+-      title: '',
++      title: 'You are in the hallway',
+       description: "You look around...there is a piano in the corner, and several doors on either side of the hallway. Behind each door is an opportunity to gain some smarts. Which room would you like to go into?",
+       answers: [],
+       batteryPower: 100,
+       smarts: 0,
+-      roomIndex: 0,
++      room: 'hallway',
+     }
+     this.handleTextChange = this.handleTextChange.bind(this)
+     this.handleRoomChange = this.handleRoomChange.bind(this)
+-    this.parseDescription = this.parseDescription.bind(this)
+-  }
+-
+-      
+-  componentDidMount() {
+-    this.setState({
+-      title: 'You are in the Hallway...',
+-    })
+   }
+ 
+   handleRoomChange(roomToChangeTo) {
+-    // TODO: do this
++    const newRoom = rooms.rooms.filter(room => room.room === roomToChangeTo)
+     this.setState({
+-      roomIndex: roomToChangeTo
++      room: roomToChangeTo,
++      title: '',
++      description: newRoom[0].instructions,
++      answers: [], // clear out answers
+     })
+   }
+ 
+   handleTextChange(key, newText) {
+     this.setState({[key]: newText})
+   }
+-      
+-    
+-      onTextComplete = () => {
+-        this.setState({
+-          textComplete: true
+-        });
+-      };
+-
+-  parseDescription(description) {
+-    if (description.constructor === Array) {
+-      // pick randomly between elements of an array
+-      
+-      const number = Math.floor(Math.random() * description.length)
+ 
+-      // assume first one is always correct
+-
+-      // this.props.handleAnswer(number === 0)
+-
+-      return description[number]
+-
+-    } else {
+-      return description
+-    }
+-  }
++  onTextComplete = () => {
++    this.setState({
++      textComplete: true
++    });
++  };
+ 
+     render() {
+       return (
+@@ -85,7 +62,7 @@ class Hallway extends React.Component {
+                 <h2>{this.state.title}</h2>
+                 <br></br>
+                 <br></br>
+-                { this.parseDescription(this.state.description) }
++                { this.state.description }
+                 <br></br>
+                 { this.state.answers && this.state.answers.map(answer => {
+                   return (
+@@ -97,9 +74,14 @@ class Hallway extends React.Component {
+             </Row>
+             <Row>
+             <Col size="md-12">
+-            {this.state.textComplete ? <Buttons
+-            index={this.state.roomIndex} handleTextChange={this.handleTextChange} handleRoomChange={this.handleRoomChange}
+-             /> : null}        
++            {this.state.textComplete && 
++              <Buttons
++                room={this.state.room}
++                handleTextChange={this.handleTextChange}
++                handleRoomChange={this.handleRoomChange}
++                handleAnswer={this.props.handleAnswer}
++              />
++             }        
+             </Col>
+             </Row>
+           </Container>
+diff --git a/client/src/components/frontDoor/rooms.json b/client/src/components/frontDoor/rooms.json
+index d53c743..39ed0cf 100644
+--- a/client/src/components/frontDoor/rooms.json
++++ b/client/src/components/frontDoor/rooms.json
+@@ -26,7 +26,8 @@
+                 },
+                 {
+                     "option": "Go back to hallway",
+-                    "result": ""
++                    "result": "",
++                    "gotoRoom": "hallway"
+                 }
+                     
+                 
+@@ -58,7 +59,7 @@
+                 {
+                     "option": "Go back to hallway",
+                     "result": "",
+-                    "returnToHallway": true
++                    "gotoRoom": "hallway"
+                 }
+                     
+                 
+@@ -88,7 +89,8 @@
+                 },
+                 {
+                     "option": "Go back to hallway",
+-                    "result": ""
++                    "result": "",
++                    "gotoRoom": "hallway"
+                 }
+                     
+                 
+@@ -96,7 +98,7 @@
+         },{
+             "room": "hallway",
+             "photo": "whatever.png",
+-            "instructions": "You walk into room 120...",
++            "instructions": "You walk into the hallway...",
+             "optionsResults": [
+                 {
+                     "option": "Go into Room 120",

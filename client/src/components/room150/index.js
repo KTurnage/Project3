@@ -4,10 +4,10 @@ import Row from "../Row";
 import Col from "../Col";
 import Buttons from '../../components/Buttons'
 
-function Room120() {
+function Room150() {
   return (
     <div>
-
+      
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
@@ -18,19 +18,18 @@ function Room120() {
           <Col size="md-12">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
-            
+          
             </p>
-
           </Col>
         </Row>
         <Row>
-          <Col size="md-12">
-            <Buttons></Buttons>
-          </Col>
+        <Col size="md-12">
+    <Buttons></Buttons>        
+        </Col>
         </Row>
       </Container>
     </div>
   );
 }
 
-export default Room120;
+export default Room150;

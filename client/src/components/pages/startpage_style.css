@@ -33,3 +33,7 @@ body {
     text-align: center;
     width: 100%;
 }
+
+.progress {
+  margin-top: 120px;
+}

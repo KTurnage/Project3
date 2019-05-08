@@ -3,7 +3,7 @@
        {
             "room": "room120",
             "photo": "./images/FizzBuzz.png",
-            "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
+            "instructions": "You walk into room 120. \nThere is a whiteboard to your left, and plenty of tables and chairs.\nWhat would you like to do?",
             "optionsResults": [
                 {
                     "option": "Brayden walks by offers a tutoring session",
@@ -35,11 +35,11 @@
         {
             "room": "room150",
             "photo": "./images/MainEntrance.2.jpg",
-            "instructions": "You walk into room 150...you hear 'hello folks!' You know Sarah is here to save the day. You have several options in this room to gain some smarts. What would you like to do?",
+            "instructions": "You walk into room 150...you hear 'hello folks!' \nYou know Sarah is here to save the day! \nYou have several options in this room to gain some smarts. \nWhat would you like to do?",
             "optionsResults": [
                 {
-                    "option": "Get help from Sarah. *show class activity*",
-                    "result": "We need to name our variable something meaningful",
+                    "option": "Get help from Sarah.",
+                    "result": "We need to name our variable something meaningful.",
                     "answers": [{"value": "A) Bucket", "isCorrect": true}, {"value": "B) Kittens", "isCorrect": true}, {"value": "C) var", "isCorrect": false}]
                 },
                 {
@@ -47,9 +47,9 @@
                     "result": ["Boot Camp Spot is working today! You earned 5 smarts.", "BCS is down again. You lost an additional 5% of battery"]
                 },
                 {
-                    "option": "Follow along in class activity *show class activity*",
-                    "result": "",
-                    "answers": [{"value": "A)", "isCorrect": false}, {"value": "B)", "isCorrect": false}, {"value": "C)", "isCorrect": true}]
+                    "option": "Do a daily algorithm.Solve Odd or Even.\nChoose the correct missing\nline of code.",
+                    "result": "var oddOrEven = function(num) {\nif (____________) {\nreturn 'even';\n} else {\nreturn'odd';\n}\n};",
+                    "answers": [{"value": "A) num 2 === 2", "isCorrect": false}, {"value": "B) num % 4 === 2", "isCorrect": false}, {"value": "C) num % 2 === 0", "isCorrect": true}]
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
@@ -70,8 +70,8 @@
             "optionsResults": [
                 {
                     "option": "Read Heroku deployment guide",
-                    "result": "",
-                    "answers": [{"value": "A)", "isCorrect": true}, {"value": "B)", "isCorrect": false}, {"value": "C", "isCorrect": false}]
+                    "result": "How do you create a new\nHeroku repository from\nthe command line?",
+                    "answers": [{"value": "A) heroku create", "isCorrect": true}, {"value": "B) heroku login", "isCorrect": false}, {"value": "C) git push heroku master", "isCorrect": false}]
                 },
                 {
                     "option": "Plug into a questionable outlet",

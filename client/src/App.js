@@ -36,7 +36,6 @@ class App extends React.Component {
 
           <div>
 
-            { this.state.batteryLife <= 0 } <Route component={LosePage} />
 
             <Route exact path="/" component={Startpage} />
             <Route

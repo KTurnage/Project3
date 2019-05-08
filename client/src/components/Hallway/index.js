@@ -17,59 +17,36 @@ class Hallway extends React.Component {
 
     this.state = {
       textComplete: true,
-      title: '',
+      title: 'You are in the hallway',
       description: "You look around...there is a piano in the corner, and several doors on either side of the hallway. Behind each door is an opportunity to gain some smarts. Which room would you like to go into?",
       answers: [],
       batteryPower: 100,
       smarts: 0,
-      roomIndex: 0,
+      room: 'hallway',
     }
     this.handleTextChange = this.handleTextChange.bind(this)
     this.handleRoomChange = this.handleRoomChange.bind(this)
-    this.parseDescription = this.parseDescription.bind(this)
-  }
-
-      
-  componentDidMount() {
-    this.setState({
-      title: 'You are in the Hallway...',
-    })
   }
 
   handleRoomChange(roomToChangeTo) {
-    // TODO: do this
+    const newRoom = rooms.rooms.filter(room => room.room === roomToChangeTo)
     this.setState({
-      roomIndex: roomToChangeTo
+      room: roomToChangeTo,
+      title: '',
+      description: newRoom[0].instructions,
+      answers: [], // clear out answers
     })
   }
 
   handleTextChange(key, newText) {
     this.setState({[key]: newText})
   }
-      
-    
-      onTextComplete = () => {
-        this.setState({
-          textComplete: true
-        });
-      };
 
-  parseDescription(description) {
-    if (description.constructor === Array) {
-      // pick randomly between elements of an array
-      
-      const number = Math.floor(Math.random() * description.length)
-
-      // assume first one is always correct
-
-      // this.props.handleAnswer(number === 0)
-
-      return description[number]
-
-    } else {
-      return description
-    }
-  }
+  onTextComplete = () => {
+    this.setState({
+      textComplete: true
+    });
+  };
 
     render() {
       return (
@@ -85,7 +62,7 @@ class Hallway extends React.Component {
                 <h2>{this.state.title}</h2>
                 <br></br>
                 <br></br>
-                { this.parseDescription(this.state.description) }
+                { this.state.description }
                 <br></br>
                 { this.state.answers && this.state.answers.map(answer => {
                   return (
@@ -97,9 +74,14 @@ class Hallway extends React.Component {
             </Row>
             <Row>
             <Col size="md-12">
-            {this.state.textComplete ? <Buttons
-            index={this.state.roomIndex} handleTextChange={this.handleTextChange} handleRoomChange={this.handleRoomChange}
-             /> : null}        
+            {this.state.textComplete && 
+              <Buttons
+                room={this.state.room}
+                handleTextChange={this.handleTextChange}
+                handleRoomChange={this.handleRoomChange}
+                handleAnswer={this.props.handleAnswer}
+              />
+             }        
             </Col>
             </Row>
           </Container>

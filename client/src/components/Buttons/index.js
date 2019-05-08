@@ -7,7 +7,7 @@ import rooms from '../frontDoor/rooms.json';
 class Buttons extends React.Component {
 
 componentDidMount() {
-  console.log(rooms.rooms[1].optionsResults[0]);
+ 
 }
 
 // createButtons() {

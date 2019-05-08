@@ -6,6 +6,10 @@ import Typist from "react-typist";
 import Buttons from '../Buttons';
 import {Link} from "react-router-dom";
 import "./hallway_style.css";
+import Sound from 'react-sound';
+import SarahAudio from "../../assets/Sarah_Audio.wav"
+import rooms from '../frontDoor/rooms.json';
+
 
 
 
@@ -15,6 +19,12 @@ class Hallway extends React.Component {
     state = {
         textComplete: false
       }
+
+      componentDidMount() {
+   
+        
+      }
+      
     
       onTextComplete = () => {
         this.setState({
@@ -29,6 +39,13 @@ class Hallway extends React.Component {
     render() {
       return (
         <div className='body'>
+        <Sound
+        url={SarahAudio}
+        playStatus={Sound.status.PLAYING}
+        onLoading={this.handleSongLoading}
+        onPlaying={this.handleSongPlaying}
+        onFinishedPlaying={this.handleSongFinishedPlaying}
+      />
           
           <Container style={{ marginTop: 30 }}>
             <Row>
@@ -44,7 +61,7 @@ class Hallway extends React.Component {
                   You look around...there is a piano in the corner, and several doors on either side of
                   the hallway. Behind each door is an opportunity to gain some smarts. Which room would you 
                   like to go into?
-    
+                    
                 </Typist>
                 
                 

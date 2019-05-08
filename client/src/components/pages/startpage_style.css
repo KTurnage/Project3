@@ -21,7 +21,7 @@ body {
     color: antiquewhite;
     height: fit-content;
     width: auto 0;
-    padding-top: 200px;
+    /* padding-top: 200px; */
     margin-bottom: 70px;
 }
 
@@ -35,5 +35,13 @@ body {
 }
 
 .progress {
-  margin-top: 120px;
+    /* margin-top: 120px; */
+}
+
+.progress-spacing {
+    margin-top: 100px;
+}
+
+.progress-bar {
+    color: black;
 }

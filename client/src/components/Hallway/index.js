@@ -51,6 +51,13 @@ class Hallway extends React.Component {
     render() {
       return (
         <div className='body'>
+        <Sound
+        // url={SarahAudio}
+        playStatus={Sound.status.PLAYING}
+        onLoading={this.handleSongLoading}
+        onPlaying={this.handleSongPlaying}
+        onFinishedPlaying={this.handleSongFinishedPlaying}
+      />
           
           <Container style={{ marginTop: 30 }}>
             <Row>

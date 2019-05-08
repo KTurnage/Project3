@@ -8,7 +8,7 @@
                 {
                     "option": "Brayden walks by offers a tutoring session",
                     "result": "Fizz Buzz Algorithm",
-                    "answers": [{"value": "A) arr[i + 1]", "isCorrect": true}, "B) fizzBuzz[i] ", "C) arr[i]"]
+                    "answers": [{"value": "A) arr[i + 1]", "isCorrect": false},{"value": "B) fizzBuzz[i]", "isCorrect": false}, {"value": "C) arr[i]", "isCorrect": true]}
                 },
                 
                 {
@@ -18,7 +18,7 @@
                 {
                     "option": "Attempt to push to github. You have added and committed your changes.",
                     "result": "What's next?",
-                    "answers": ["git push origin master", "git pull origin master", "merge branches"]
+                    "answers": [{"value": "A) git push origin master", "isCorrect": false}, {"value": "B) git pull origin master", "isCorrect": true}, {"value": "C) merge branches", "isCorrect": false}]
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
@@ -26,7 +26,7 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": "",
+                    // "result": "",
                     "gotoRoom": "hallway"
                 }
                     
@@ -41,7 +41,7 @@
                 {
                     "option": "Get help from Sarah. *show class activity*",
                     "result": "",
-                    "answers": ["Bucket", "Kittens", "var"]
+                    "answers": [{"value": "A) Bucket", "isCorrect": true}, {"value": "B) Kittens", "isCorrect": true}, {"value": "C) var", "isCorrect": true}]
                 },
                 {
                     "option": "Log into BootCamp Spot",
@@ -50,7 +50,7 @@
                 {
                     "option": "Follow along in class activity *show class activity*",
                     "result": "",
-                    "answers": ["A", "B", "C"]
+                    "answers": [{"value": "A)", "isCorrect": false}, {"value": "B)", "isCorrect": false}, {"value": "C", "isCorrect": true}]
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
@@ -58,7 +58,7 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": "",
+                    // "result": "",
                     "gotoRoom": "hallway"
                 }
                     
@@ -73,7 +73,7 @@
                 {
                     "option": "Read Heroku deployment guide",
                     "result": "",
-                    "answers": ["A", "B", "C"]
+                    "answers": [{"value": "A)", "isCorrect": true}, {"value": "B)", "isCorrect": false}, {"value": "C", "isCorrect": false}]
                 },
                 {
                     "option": "Plug into a questionable outlet",
@@ -89,7 +89,7 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": "",
+                    // "result": "",
                     "gotoRoom": "hallway"
                 }
                     

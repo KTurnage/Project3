@@ -35,6 +35,8 @@ class App extends React.Component {
         <Smarts smarts = {this.state.smarts}/>
 
           <div>
+
+
             <Route exact path="/" component={Startpage} />
             <Route
               exact

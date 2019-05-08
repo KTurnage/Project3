@@ -8,7 +8,7 @@
                 {
                     "option": "Brayden walks by offers a tutoring session",
                     "result": "Fizz Buzz Algorithm",
-                    "answers": ["A) arr[i + 1]", "B) fizzBuzz[i] ", "C) arr[i]"]
+                    "answers": [{"value": "A) arr[i + 1]", "isCorrect": true}, "B) fizzBuzz[i] ", "C) arr[i]"]
                 },
                 
                 {
@@ -26,7 +26,8 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": ""
+                    "result": "",
+                    "gotoRoom": "hallway"
                 }
                     
                 
@@ -57,7 +58,8 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": ""
+                    "result": "",
+                    "gotoRoom": "hallway"
                 }
                     
                 
@@ -87,7 +89,8 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    "result": ""
+                    "result": "",
+                    "gotoRoom": "hallway"
                 }
                     
                 
@@ -95,19 +98,19 @@
         },{
             "room": "hallway",
             "photo": "whatever.png",
-            "instructions": "You walk into room 120...",
+            "instructions": "You walk into the hallway...",
             "optionsResults": [
                 {
                     "option": "Go into Room 120",
-                    "result": ""
+                    "gotoRoom": "room120"
                 },
                 {
                     "option": "Go into Room 150",
-                    "result": ""
+                    "gotoRoom": "room150"
                 },
                 {
                     "option": "Go into the Garden Room",
-                    "result": ""
+                    "gotoRoom": "gardenRoom"
                 }
                     
                 

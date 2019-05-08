@@ -18,7 +18,7 @@ class Hallway extends React.Component {
     this.state = {
       textComplete: true,
       title: 'You are in the hallway',
-      description: "You look around...there is a piano in the corner, and several doors on either side of the hallway. Behind each door is an opportunity to gain some smarts. Which room would you like to go into?",
+      description: "You look around...\nthere is a piano in the corner, \nand several doors on \neither side of the hallway. \nBehind each door is an opportunity\n to gain some smarts. \nWhich room would you like to go into?",
       answers: [],
       batteryPower: 100,
       smarts: 0,
@@ -69,7 +69,7 @@ class Hallway extends React.Component {
                 <h2>{this.state.title}</h2>
                 <br></br>
                 <br></br>
-                { this.state.description }
+                <pre className='typist'>{ this.state.description }</pre>
                 <br></br>
                 { this.state.answers && this.state.answers.map(answer => {
                   return (

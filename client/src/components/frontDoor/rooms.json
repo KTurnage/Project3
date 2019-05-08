@@ -2,13 +2,13 @@
     "rooms": [
        {
             "room": "room120",
-            "photo": "./images/testphoto.jpg",
+            "photo": "./images/FizzBuzz.png",
             "instructions": "You walk into room 120. There is a whiteboard to your left, and plenty of tables and chairs.",
             "optionsResults": [
                 {
                     "option": "Brayden walks by offers a tutoring session",
-                    "result": "Fizz Buzz Algorithm",
-                    "answers": [{"value": "A) arr[i + 1]", "isCorrect": false},{"value": "B) fizzBuzz[i]", "isCorrect": false}, {"value": "C) arr[i]", "isCorrect": true]}
+                    "result":  "var fizzbuzz = function(arr) {\nfor (var i = 0; i < arr.length; i++) {\n var currentNumber = _____:\n\nif (currentNumber % 15 === 0) {\nconsole.log('Fizz Buzz');\n} else if (currentNumber % 3 === 0) {\nconsole.log('Fizz');\n} else {\nconsole.log(currentNumber);\n}\n}\n};",
+                    "answers": [{"value": "A) arr[i + 1]", "isCorrect": false}, {"value": "B) fizzBuzz[i]", "isCorrect": false}, {"value": "C) arr[i]", "isCorrect": true}]
                 },
                 
                 {
@@ -26,7 +26,6 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    // "result": "",
                     "gotoRoom": "hallway"
                 }
                     
@@ -35,13 +34,13 @@
         },
         {
             "room": "room150",
-            "photo": "room150.png",
+            "photo": "./images/MainEntrance.2.jpg",
             "instructions": "You walk into room 150...you hear 'hello folks!' You know Sarah is here to save the day. You have several options in this room to gain some smarts. What would you like to do?",
             "optionsResults": [
                 {
                     "option": "Get help from Sarah. *show class activity*",
-                    "result": "",
-                    "answers": [{"value": "A) Bucket", "isCorrect": true}, {"value": "B) Kittens", "isCorrect": true}, {"value": "C) var", "isCorrect": true}]
+                    "result": "We need to name our variable something meaningful",
+                    "answers": [{"value": "A) Bucket", "isCorrect": true}, {"value": "B) Kittens", "isCorrect": true}, {"value": "C) var", "isCorrect": false}]
                 },
                 {
                     "option": "Log into BootCamp Spot",
@@ -50,7 +49,7 @@
                 {
                     "option": "Follow along in class activity *show class activity*",
                     "result": "",
-                    "answers": [{"value": "A)", "isCorrect": false}, {"value": "B)", "isCorrect": false}, {"value": "C", "isCorrect": true}]
+                    "answers": [{"value": "A)", "isCorrect": false}, {"value": "B)", "isCorrect": false}, {"value": "C)", "isCorrect": true}]
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
@@ -58,7 +57,6 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    // "result": "",
                     "gotoRoom": "hallway"
                 }
                     
@@ -89,7 +87,6 @@
                 },
                 {
                     "option": "Go back to hallway",
-                    // "result": "",
                     "gotoRoom": "hallway"
                 }
                     

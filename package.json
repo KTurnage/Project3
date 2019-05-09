@@ -28,7 +28,11 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-console-emulator": "^2.0.0",
     "react-dom": "^16.8.6",
+<<<<<<< HEAD
+    "react-remarkable": "^1.1.3",
+=======
     "react-reveal": "^1.2.2",
+>>>>>>> 7b7a498b24ff6fe445d961892d5d4229d9731292
     "react-router-dom": "^5.0.0",
     "react-sound": "^1.2.0",
     "react-typist": "^2.0.5",

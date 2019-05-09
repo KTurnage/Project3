@@ -8,6 +8,7 @@ import BatteryLife from './components/bars/batteryLife'
 import Smarts from './components/bars/smarts'
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props) // initializes `this`
@@ -38,11 +39,10 @@ class App extends React.Component {
 
 
             <Route exact path="/" component={Startpage} />
-            <Route
-              exact
-              path="/Hallway"
-              render={(props) => <Hallway handleAnswer={this.handleAnswer} {...props} />}
+            <Route exact path="/Hallway" render={(props) => <Hallway handleAnswer={this.handleAnswer} {...props} />}
             />
+            <Route exact path="/room120" component={Room120} />
+
 
 
           </div>

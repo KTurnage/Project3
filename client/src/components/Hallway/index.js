@@ -20,10 +20,8 @@ class Hallway extends React.Component {
     this.state = {
       textComplete: false,
       title: 'You are in the hallway',
-
       description: "You look around...there is a piano in the corner, and several doors on either side of the hallway. Behind each door is an opportunity to gain some smarts. Which room would you like to go into?",
       result: '',
-
       answers: [],
       batteryPower: 100,
       smarts: 0,
@@ -108,7 +106,6 @@ class Hallway extends React.Component {
                 <h2>{this.state.title}</h2>
                 <br></br>
                 <br></br>
-
                   {this.state.description}
                   </Typist>
                 <br></br>

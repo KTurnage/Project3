@@ -13,16 +13,16 @@
                 
                 {
                     "option": "Work solo on your project",
-                    "result": ["Congratulations, you learned stuffs. You earned 10 smarts", "You went down a rabbit hole, and learned nothing. You lost an additional 5% battery."]
+                    "result": ["Congratulations, you learned stuffs.\nYou earned 10 smarts", "You went down a rabbit hole, and learned nothing. \nYou lost an additional 5% battery."]
                 },
                 {
-                    "option": "Attempt to push to github. You have added and committed your changes.",
+                    "option": "Attempt to push to github. \nYou have added and committed your changes.",
                     "result": "What's next?",
                     "answers": [{"value": "A) git push origin master", "isCorrect": false}, {"value": "B) git pull origin master", "isCorrect": true}, {"value": "C) merge branches", "isCorrect": false}]
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
-                    "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
+                    "result": ["You earned enough smarts to successfully deploy to Heroku! \nCongratulations! You completed the Boot Camp!", "You need more smarts to figure out Heroku."]
                 },
                 {
                     "option": "Go back to hallway",
@@ -44,7 +44,7 @@
                 },
                 {
                     "option": "Log into BootCamp Spot",
-                    "result": ["Boot Camp Spot is working today! You earned 5 smarts.", "BCS is down again. You lost an additional 5% of battery"]
+                    "result": ["Boot Camp Spot is working today! \nYou earned 5 smarts.", "BCS is down again. \nYou lost an additional 5% of battery"]
                 },
                 {
                     "option": "Do a daily algorithm.Solve Odd or Even.\nChoose the correct missing\nline of code.",
@@ -53,7 +53,7 @@
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
-                    "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
+                    "result": ["You earned enough smarts to successfully deploy to Heroku! \nCongratulations! You completed the Boot Camp!", "You need more smarts to figure out Heroku."]
                 },
                 {
                     "option": "Go back to hallway",
@@ -75,15 +75,15 @@
                 },
                 {
                     "option": "Plug into a questionable outlet",
-                    "result": ["You plugged into the outlet and earned 10% battery.", "You're lucky this outlet didn't fry your computer, however, you did not get any battery life."]
+                    "result": ["You plugged into the outlet and earned 10% battery.", "You're lucky this outlet didn't fry your computer, however, \nyou did NOT get any battery life."]
                 },
                 {
                     "option": "Collaborate with your team",
-                    "result": ["You successfully collaborated with your team. You earned 10 smarts.", "You all went down a BAD path, and learned nothing. You lose an additional 5% battery."]
+                    "result": ["You successfully collaborated with your team. \nYou earned 10 smarts.", "You all went down a BAD path, and learned nothing. \nYou lose an additional 5% battery."]
                 },
                 {
                     "option": "Attempt to deploy to Heroku",
-                    "result": ["You earned enough smarts to successfully deploy to Heroku", "You need more smarts to figure out Heroku."]
+                    "result": ["You earned enough smarts to successfully deploy to Heroku! \nCongratulations! You completed the Boot Camp!", "You need more smarts to figure out Heroku."]
                 },
                 {
                     "option": "Go back to hallway",

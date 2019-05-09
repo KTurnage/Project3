@@ -20,7 +20,7 @@ class Hallway extends React.Component {
     this.state = {
       textComplete: false,
       title: 'You are in the hallway',
-      description: "You look around...there is a piano in the corner, and several doors on either side of the hallway. Behind each door is an opportunity to gain some smarts. Which room would you like to go into?",
+      description: "You look around...there is a piano in the corner\nand several doors on either side of the hallway.\nBehind each door is an opportunity to gain some smarts.\nWhich room would you like to go into?",
       result: '',
       answers: [],
       batteryPower: 100,
@@ -110,7 +110,7 @@ class Hallway extends React.Component {
                   </Typist>
                 <br></br>
                 {/* button options for each room */}
-                <p className='typist'>{ this.state.result }</p>
+                <pre className='typist'>{ this.state.result }</pre>
                 { this.state.answers && this.state.answers.map(answer => {
                   return (
                     <button onClick={() => this.props.handleAnswer(answer.isCorrect)}>{answer.value}</button>

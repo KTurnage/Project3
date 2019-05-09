@@ -23,7 +23,7 @@ class Buttons extends React.Component {
       }
 
       //we'll also always change the text and answers, if they exist
-      this.props.handleTextChange('description', pickedOption || option.result)
+      this.props.handleTextChange('result', pickedOption || option.result)
       this.props.handleTextChange('answers', option.answers)
     }
   }

@@ -4,7 +4,6 @@ import Row from "../Row";
 import Col from "../Col";
 import Typist from "react-typist";
 import Buttons from '../Buttons';
-import {Link} from "react-router-dom";
 import "./hallway_style.css";
 import Sound from 'react-sound';
 import SarahAudio from "../../assets/Sarah_Audio.wav";
@@ -21,7 +20,10 @@ class Hallway extends React.Component {
     this.state = {
       textComplete: false,
       title: 'You are in the hallway',
-      description: "You look around...\nthere is a piano in the corner, \nand several doors on either side of the hallway. \nBehind each door is an opportunity to gain some smarts. \nWhich room would you like to go into?",
+
+      description: "You look around...there is a piano in the corner, and several doors on either side of the hallway. Behind each door is an opportunity to gain some smarts. Which room would you like to go into?",
+      result: '',
+
       answers: [],
       batteryPower: 100,
       smarts: 0,
@@ -37,6 +39,7 @@ class Hallway extends React.Component {
       room: roomToChangeTo,
       title: '',
       description: newRoom[0].instructions,
+      result: '',
       answers: [], // clear out answers
     })
     console.log(this.state)
@@ -55,6 +58,8 @@ class Hallway extends React.Component {
     render() {
       return (
         <div className='body'>
+
+        {/* sounds for each rooom using Ternary  */}
        {this.state.room === 'hallway' ? 
           <Sound
             url={'http://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/2017/06/15/daily_download_20170615_128.mp3'}
@@ -103,11 +108,12 @@ class Hallway extends React.Component {
                 <h2>{this.state.title}</h2>
                 <br></br>
                 <br></br>
-                <pre className='typist'>{ this.state.description }</pre>
-               
+
                   {this.state.description}
                   </Typist>
                 <br></br>
+                {/* button options for each room */}
+                <p className='typist'>{ this.state.result }</p>
                 { this.state.answers && this.state.answers.map(answer => {
                   return (
                     <button onClick={() => this.props.handleAnswer(answer.isCorrect)}>{answer.value}</button>
